@@ -4,24 +4,23 @@
 clickhouse_version: 'latest'
 clickhouse_service_ensure: 'started'
 clickhouse_service_enable: true
-
-#Flag for using with requirements check
+# Flag for using with requirements check
 clickhouse_supported: false
-#Type of installation (package,source)
+# Type of installation (package,source)
 clickhouse_setup: 'package'
-#Flag for remove clickhouse from host(disabled by default)
+# Flag for remove clickhouse from host(disabled by default)
 clickhouse_remove: false
-#Flag for full remove(incl db and config), use clickhouse_remove + clickhouse_remove_full
+# Flag for full remove(incl db and config), use clickhouse_remove + clickhouse_remove_full
 clickhouse_remove_full: false
 
 clickhouse_profiles_default:
- default:
-   max_memory_usage: 10000000000
-   use_uncompressed_cache: 0
-   load_balancing: random
-   max_partitions_per_insert_block: 100
- readonly:
-   readonly: 1
+  default:
+    max_memory_usage: 10000000000
+    use_uncompressed_cache: 0
+    load_balancing: random
+    max_partitions_per_insert_block: 100
+  readonly:
+    readonly: 1
 
 clickhouse_profiles_custom: {}
 
@@ -80,9 +79,9 @@ clickhouse_users_default:
 clickhouse_ready_retries: 3
 clickhouse_ready_delay: 5
 
-#Full form { name:'<username>', password: '<plainpassword>', password_sha256_hex: '<sha256password>',
+# Full form { name:'<username>', password: '<plainpassword>', password_sha256_hex: '<sha256password>',
 #   networks:"<{} with nets>", profile:'<profile>', quota:'<quota>', dbs: '{} with dbs', comment: '<some comment>'}
-#Req: name, password or password_256_hex
+# Req: name, password or password_256_hex
 clickhouse_users_custom: {}
 
 clickhouse_quotas_intervals_default:

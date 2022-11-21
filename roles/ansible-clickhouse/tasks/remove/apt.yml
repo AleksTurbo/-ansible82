@@ -1,12 +1,12 @@
 ---
-#Main installation actions
-#https://clickhouse.com/docs/en/getting-started/#installation
+# Main installation actions
+# https://clickhouse.com/docs/en/getting-started/#installation
 
 - name: Uninstall by APT | Package uninstallation
   apt:
     name: "{{ clickhouse_package }}"
     state: absent
-    purge: yes
+    purge: true
   become: true
 
 - name: Uninstall by APT | Repo uninstallation

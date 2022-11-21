@@ -1,6 +1,6 @@
 ---
-#Main installation actions
-#https://clickhouse.com/docs/en/getting-started/#installation
+# Main installation actions
+# https://clickhouse.com/docs/en/getting-started/#installation
 
 - name: Install by YUM | Ensure clickhouse repo installed
   yum_repository:
@@ -8,8 +8,8 @@
     file: clickhouse
     description: "Clickhouse repo"
     baseurl: "{{ clickhouse_repo }}"
-    gpgcheck: no
-    enabled: yes
+    gpgcheck: false
+    enabled: true
   tags: [install]
   become: true
 

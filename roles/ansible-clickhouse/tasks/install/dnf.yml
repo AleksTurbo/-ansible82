@@ -1,6 +1,6 @@
 ---
-#Main installation actions
-#https://clickhouse.com/docs/en/getting-started/#installation
+# Main installation actions
+# https://clickhouse.com/docs/en/getting-started/#installation
 
 - name: Install by YUM | Ensure clickhouse repo GPG key imported
   rpm_key:
@@ -15,7 +15,7 @@
     file: clickhouse
     description: "Clickhouse repo"
     baseurl: "{{ clickhouse_repo }}"
-    enabled: yes
+    enabled: true
     gpgcheck: 1
     gpgkey: "{{ clickhouse_repo_key }}"
   tags: [install]

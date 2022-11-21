@@ -1,12 +1,12 @@
 ---
-#Main installation actions
-#https://clickhouse.com/docs/en/getting-started/#installation
+# Main installation actions
+# https://clickhouse.com/docs/en/getting-started/#installation
 
 - name: Uninstall by YUM | Ensure clickhouse package uninstalled
   yum:
     name: "{{ clickhouse_package }}"
     state: absent
-    autoremove: yes
+    autoremove: true
   become: true
 
 - name: Uninstall by YUM | Ensure clickhouse repo uninstalled
