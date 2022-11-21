@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  clickhouse-01:
+    image: pycontribs/centos:7
+    container_name: clickhouse
+    restart: always
+    tty: true
+
+  vector-01:
+    image: pycontribs/centos:7
+    container_name: vector
+    restart: always
+    tty: true
